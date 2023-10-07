@@ -6,6 +6,7 @@ export default {
       sans: ['Plus Jakarta Sans', 'sans-serif'],
     },
     colors: {
+      white: '#fff',
       primary: {
         100: '#D6E4FD',
         200: '#AEC8FC',
