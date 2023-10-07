@@ -1,9 +1,9 @@
-import { Header } from './components/layout/Header.jsx';
+import { Layout } from './components/layout/Layout.jsx';
 
 export const App = () => {
   return (
-    <>
-      <Header />
-    </>
+    <Layout>
+      <h2>gello</h2>
+    </Layout>
   );
 };

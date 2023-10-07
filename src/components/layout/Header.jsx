@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <header className="flex items-center justify-between py-10 pl-[60px] pr-8 bg-white">
       <div className="flex items-center">
-        <h1 className="text-3xl font-bold text-primary-500 mr-16">MORENT</h1>
+        <h1 className="title mr-16">MORENT</h1>
         <SearchInput />
       </div>
       <div>

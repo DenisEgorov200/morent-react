@@ -4,6 +4,16 @@
 
 @layer base {
     body {
+        color: rgba(19, 19, 19, 0.60);
         background: #f6f7f9;
     }
+}
+
+.title {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.96px;
+    color: #3563E9;
 }
