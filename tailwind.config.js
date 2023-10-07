@@ -18,6 +18,7 @@ export default {
       '6xl': '4.5rem',
     },
     colors: {
+      transparent: 'transparent',
       white: '#fff',
       primary: {
         100: '#D6E4FD',
