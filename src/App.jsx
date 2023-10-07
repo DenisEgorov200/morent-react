@@ -8,7 +8,9 @@ export const App = () => {
       <PrimaryButton label="primary button" size="small" />
       <PrimaryButton label="primary button" size="medium" />
       <PrimaryButton label="primary button" size="large" />
-      <MinimalButton />
+      <MinimalButton label="minimal button" size="large" />
+      <MinimalButton label="minimal button" size="medium" />
+      <MinimalButton label="minimal button" size="small" />
     </>
   );
 };
