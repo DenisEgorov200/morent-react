@@ -1,5 +1,6 @@
 import { MinimalButton } from './components/ui/MinimalButton.jsx';
 import { PrimaryButton } from './components/ui/PrimaryButton.jsx';
+import { SecondaryButton } from './components/ui/SecondaryButton.jsx';
 
 export const App = () => {
   return (
@@ -11,6 +12,9 @@ export const App = () => {
       <MinimalButton label="minimal button" size="large" />
       <MinimalButton label="minimal button" size="medium" />
       <MinimalButton label="minimal button" size="small" />
+      <SecondaryButton label="minimal button" size="large" />
+      <SecondaryButton label="minimal button" size="medium" />
+      <SecondaryButton label="minimal button" size="small" />
     </>
   );
 };
