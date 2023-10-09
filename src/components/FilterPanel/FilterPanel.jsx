@@ -1,5 +1,5 @@
 import { Mark } from '../ui/Mark.jsx';
-import { ArrowDown2 } from 'iconsax-react';
+import { Select } from '../ui/Select.jsx';
 
 export const FilterPanel = ({ title, options }) => {
   return (
@@ -14,10 +14,7 @@ export const FilterPanel = ({ title, options }) => {
             key={option.id}
             className="flex flex-col justify-center border-r-[1px] border-secondary-200 px-6 first:pl-0 last:pr-0 last:border-0">
             <span className="text-secondary-500 font-bold mb-2">{option.title}</span>
-            <div className="flex items-center cursor-pointer">
-              <p className="text-secondary-300 text-xs mr-2">{option.description}</p>
-              <ArrowDown2 size="14" />
-            </div>
+            <Select placeholder={option.description} />
           </div>
         ))}
       </div>
