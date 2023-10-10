@@ -11,6 +11,9 @@ export const Hero = () => {
           </p>
         </div>
         <PrimaryButton label="Rental Car" />
+        <div className="flex justify-center">
+          <img src="/herocar.png" alt="car" />
+        </div>
       </div>
       <div className="p-6 bg-primary-500 text-white font-medium rounded-[10px]">
         <div className="max-w-[300px]">
@@ -20,6 +23,9 @@ export const Hero = () => {
           </p>
         </div>
         <PrimaryButton label="Rental Car" color="information-500" />
+        <div className="flex justify-center">
+          <img src="/herocar.png" alt="car" />
+        </div>
       </div>
     </div>
   );
