@@ -6,13 +6,10 @@ const config = {
   },
 };
 
-export const getCarDesc = async () => {
+export const getCarDesc = async (model) => {
   try {
-    const carDesc = await ky
-      .get('https://api.api-ninjas.com/v1/cars?limit=2&model=camry', config)
-      .json();
-
-    console.log(carDesc);
+    const response = await ky.get(`https://api.api-ninjas.com/v1/cars?model=${model}`, config);
+    return await response.json();
   } catch (err) {
     console.log(err.message);
   }
