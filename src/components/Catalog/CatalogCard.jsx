@@ -3,7 +3,7 @@ import { PrimaryButton } from '../ui/PrimaryButton.jsx';
 
 export const CatalogCard = () => {
   return (
-    <div className="flex flex-col justify-center p-6 bg-white rounded-[10px] mb-8">
+    <div className="flex flex-col justify-center p-6 bg-white rounded-[10px]">
       <div className="flex items-center justify-between mb-16">
         <div>
           <h5 className="text-xl font-bold text-secondary-500">Koenigsegg</h5>
@@ -30,7 +30,7 @@ export const CatalogCard = () => {
       </div>
       <div className="flex items-center justify-between">
         <p className="text-sm font-bold text-secondary-300">
-          <span className="text-xl font-bold text-secondary-500">$99/</span> day
+          <span className="text-xl font-bold text-secondary-500">$99.00/</span> day
         </p>
         <PrimaryButton label="Rent Now" />
       </div>
