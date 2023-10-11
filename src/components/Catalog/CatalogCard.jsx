@@ -1,5 +1,6 @@
 import { GasStation, Heart, Profile2User } from 'iconsax-react';
 import { PrimaryButton } from '../ui/PrimaryButton.jsx';
+import { generateCarImgUrl } from '../../utils/requests.js';
 
 export const CatalogCard = ({ desc }) => {
   return (
@@ -14,7 +15,10 @@ export const CatalogCard = ({ desc }) => {
         <Heart size="24" color="#90A3BF" variant="Outline" className="cursor-pointer" />
       </div>
       <div className="flex items-center justify-center mb-16">
-        <img src="/car.png" alt="car" />
+        <img
+          src={generateCarImgUrl(desc.make, desc.model, desc.year)}
+          alt={`${desc.make} ${desc.model}`}
+        />
       </div>
       <div className="flex items-center gap-x-4 mb-6">
         <div className="flex items-center text-sm font-medium text-secondary-300">
