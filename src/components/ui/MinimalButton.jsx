@@ -1,17 +1,13 @@
-export const MinimalButton = ({ label, size }) => {
-  let buttonSize = 'px-4 py-1 text-xs';
+import clsx from 'clsx';
 
-  if (size === 'small') {
-    buttonSize = 'px-4 py-1 text-xs';
-  } else if (size === 'medium') {
-    buttonSize = 'px-4 py-2.5 text-xs';
-  } else if (size === 'large') {
-    buttonSize = 'px-4 py-3.5 text-base';
-  }
-
+export const MinimalButton = ({ label, className }) => {
   return (
     <button
-      className={`font-semibold text-secondary-200 rounded ${buttonSize} hover:text-secondary-500 hover:bg-white active:bg-primary-100 focus:border-[1px] focus:border-secondary-200 disabled:text-secondary-400`}>
+      className={clsx(
+        'py-2.5 px-5 font-semibold text-primary-500 border-[1px] border-transparent',
+        className,
+        'hover:text-secondary-500 active:bg-primary-100 focus:border-secondary-200 disabled:text-secondary-400',
+      )}>
       {label}
     </button>
   );

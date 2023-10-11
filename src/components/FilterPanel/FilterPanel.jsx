@@ -2,7 +2,6 @@ import { Mark } from '../ui/Mark.jsx';
 import { Select } from '../ui/Select.jsx';
 
 export const FilterPanel = ({ title, filters }) => {
-  console.log(filters);
   return (
     <div className="py-7 px-12 bg-white rounded-[10px]">
       <div className="flex items-center mb-4">

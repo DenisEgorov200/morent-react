@@ -18,7 +18,7 @@ export const Select = ({ placeholder, options }) => {
       <ArrowDown2 size="14" />
       {isOpen && (
         <ul
-          className="absolute top-[20px] w-full flex flex-col bg-white shadow-2xl rounded-[10px]"
+          className="absolute top-[20px] w-full flex flex-col bg-white shadow-2xl overflow-hidden rounded-[10px]"
           ref={selectRef}>
           {options.map((option) => (
             <li
