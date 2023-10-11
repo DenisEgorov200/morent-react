@@ -1,19 +1,34 @@
+import { useRef, useState } from 'react';
 import { ArrowDown2 } from 'iconsax-react';
-import { useState } from 'react';
+import { useOnClickOutside } from '../../hooks/useOnClickOutside.js';
 
-export const Select = ({ placeholder, selected }) => {
+export const Select = ({ placeholder, options }) => {
+  const selectRef = useRef();
+  useOnClickOutside(selectRef, () => setIsOpen(false));
+  const [selectedOption, setSelectedOption] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+
+  const onClickOption = (option) => {
+    setSelectedOption(option.label);
+  };
 
   return (
     <div className="relative flex items-center cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-      <p className="text-secondary-300 text-xs mr-2">{placeholder}</p>
+      <p className="text-secondary-300 text-xs mr-2">{selectedOption || placeholder}</p>
       <ArrowDown2 size="14" />
       {isOpen && (
-        <div className="absolute top-[20px] flex flex-col p-2 bg-white border-2 border-primary-100">
-          <p>Moscow</p>
-          <p>Krasnodar</p>
-          <p>Nizny Novgorod</p>
-        </div>
+        <ul
+          className="absolute top-[20px] w-full flex flex-col bg-white shadow-2xl rounded-[10px]"
+          ref={selectRef}>
+          {options.map((option) => (
+            <li
+              key={option.id}
+              className="p-2 hover:bg-primary-100"
+              onClick={() => onClickOption(option)}>
+              {option.label}
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

@@ -14,7 +14,7 @@ const imgConfig = {
 export const getCarDesc = async (model) => {
   try {
     const response = await ky.get(
-      `https://api.api-ninjas.com/v1/cars?limit=4&year=2022`,
+      `https://api.api-ninjas.com/v1/cars?limit=50&year=2022`,
       descConfig,
     );
     return await response.json();
@@ -30,6 +30,7 @@ export const generateCarImgUrl = (make, model, year) => {
   baseURL.searchParams.append('make', make);
   baseURL.searchParams.append('modelFamily', model.split(' ')[0]);
   baseURL.searchParams.append('modelYear', year);
+  baseURL.searchParams.append('zoomType', 'fullscreen');
 
   return `${baseURL}`;
 };
