@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
+import { useOnClickOutside } from 'hooks/useOnClickOutside.js';
+
 import { ArrowDown2 } from 'iconsax-react';
-import { useOnClickOutside } from '../../hooks/useOnClickOutside.js';
 
 export const Select = ({ placeholder, options }) => {
   const selectRef = useRef();

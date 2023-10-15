@@ -1,7 +1,8 @@
-import { FilterPanel } from '../FilterPanel/FilterPanel.jsx';
+import { FilterPanel } from './FilterPanel.jsx';
+import { PrimaryButton } from 'ui/PrimaryButton.jsx';
+import { filters } from 'constants/constants.jsx';
+
 import { ArrowSwapVertical } from 'iconsax-react';
-import { PrimaryButton } from './PrimaryButton.jsx';
-import { filters } from '../../constants/constants.js';
 
 export const FilterPanels = () => {
   return (

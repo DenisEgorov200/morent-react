@@ -1,20 +1,4 @@
-const footerLinks = [
-  {
-    id: 0,
-    title: 'About',
-    links: ['How it works', 'Featured', 'Partnership', 'Bussiness Relation'],
-  },
-  {
-    id: 1,
-    title: 'Community',
-    links: ['How it works', 'Featured', 'Partnership', 'Bussiness Relation'],
-  },
-  {
-    id: 2,
-    title: 'Socials',
-    links: ['How it works ', 'Featured', 'Partnership', 'Bussiness Relation'],
-  },
-];
+import { footerLinks } from 'constants/constants.jsx';
 
 export const Footer = () => {
   return (

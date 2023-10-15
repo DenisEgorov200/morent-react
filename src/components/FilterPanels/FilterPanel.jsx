@@ -1,5 +1,5 @@
-import { Mark } from '../ui/Mark.jsx';
-import { Select } from '../ui/Select.jsx';
+import { Select } from 'ui/Select.jsx';
+import { Mark } from 'ui/Mark.jsx';
 
 export const FilterPanel = ({ title, filters }) => {
   return (

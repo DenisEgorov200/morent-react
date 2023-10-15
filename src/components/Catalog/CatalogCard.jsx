@@ -1,6 +1,7 @@
+import { PrimaryButton } from 'ui/PrimaryButton.jsx';
+import { generateCarImgUrl } from '@/utils/requests.js';
+
 import { GasStation, Heart, Profile2User } from 'iconsax-react';
-import { PrimaryButton } from '../ui/PrimaryButton.jsx';
-import { generateCarImgUrl } from '../../utils/requests.js';
 
 export const CatalogCard = ({ desc }) => {
   return (
@@ -12,9 +13,9 @@ export const CatalogCard = ({ desc }) => {
           </h5>
           <span className="text-sm font-bold capitalize text-secondary-300">{desc.class}</span>
         </div>
-        <Heart size="24" color="#90A3BF" variant="Outline" className="cursor-pointer" />
+        <Heart size="24" variant="Outline" className="cursor-pointer" />
       </div>
-      <div className="flex items-center justify-center mb-16">
+      <div className="flex items-center justify-center flex-1 mb-16">
         <img
           src={generateCarImgUrl(desc.make, desc.model, desc.year)}
           alt={`${desc.make} ${desc.model}`}
