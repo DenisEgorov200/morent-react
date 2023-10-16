@@ -4,7 +4,7 @@ import { headerIcons } from 'constants/constants.jsx';
 export const Header = () => {
   return (
     <header className="flex items-center justify-between py-10 pl-[60px] pr-8 bg-white">
-      <div className="flex items-center w-1/3">
+      <div className="flex items-center">
         <h1 className="title mr-16">MORENT</h1>
         <SearchInput />
       </div>
