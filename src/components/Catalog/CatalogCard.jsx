@@ -1,9 +1,12 @@
 import { PrimaryButton } from 'ui/PrimaryButton.jsx';
 import { generateCarImgUrl } from '@/utils/requests.js';
+import { useOnHover } from 'hooks/useOnHover.js';
 
 import { GasStation, Heart, Profile2User } from 'iconsax-react';
 
 export const CatalogCard = ({ desc }) => {
+  const [hoverRef, isHovering] = useOnHover();
+
   return (
     <div className="flex flex-col justify-center p-6 bg-white rounded-[10px]">
       <div className="flex items-center justify-between mb-16">
@@ -15,7 +18,13 @@ export const CatalogCard = ({ desc }) => {
             {desc.class}
           </span>
         </div>
-        <Heart size="24" variant="Outline" className="cursor-pointer" />
+        <Heart
+          ref={hoverRef}
+          size="24"
+          variant={isHovering ? 'Bold' : 'Outline'}
+          color={isHovering ? '#ED3F3F' : '#90A3BF'}
+          className="cursor-pointer"
+        />
       </div>
       <div className="flex flex-col items-center flex-1 mb-6">
         <div className="flex items-center justify-center flex-1 mb-16 max-md:m-0">
