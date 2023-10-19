@@ -65,3 +65,5 @@ export const footerLinks = [
     links: ['How it works ', 'Featured', 'Partnership', 'Bussiness Relation'],
   },
 ];
+
+export const searchKeys = ['make', 'model'];

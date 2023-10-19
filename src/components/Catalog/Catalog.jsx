@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
 import { CatalogCard } from './CatalogCard.jsx';
 import { getCarDesc } from 'utils/requests.js';
+import { searchKeys } from 'constants/constants.jsx';
 import { MinimalButton } from 'ui/MinimalButton.jsx';
 import { PrimaryButton } from 'ui/PrimaryButton.jsx';
 
 export const Catalog = () => {
-  const [carDesc, setCardDesc] = useState([]);
+  const { searchValue } = useSelector((state) => state.search);
+  const [carDesc, setCarDesc] = useState([]);
   const [count, setCount] = useState(8);
 
   const handleShowMore = () => {
@@ -15,8 +18,12 @@ export const Catalog = () => {
   };
 
   useEffect(() => {
-    getCarDesc().then((data) => setCardDesc(data));
+    getCarDesc().then((data) => setCarDesc(data));
   }, []);
+
+  const filteredCars = carDesc.filter((car) => {
+    return searchKeys.some((key) => car[key].toLowerCase().includes(searchValue));
+  });
 
   return (
     <div className="pb-16 pt-8">
@@ -31,7 +38,7 @@ export const Catalog = () => {
         <h4 className="font-semibold text-secondary-300">Recommendation car</h4>
       </div>
       <div className="grid grid-cols-4 gap-8 max-xl:grid-cols-2 max-md:grid-cols-1">
-        {carDesc.map((desc) => <CatalogCard key={uuidv4()} desc={desc} />).splice(0, count)}
+        {filteredCars.map((desc) => <CatalogCard key={uuidv4()} desc={desc} />).splice(0, count)}
       </div>
       <div className="relative flex items-center justify-center mt-16">
         {count <= carDesc.length && (
