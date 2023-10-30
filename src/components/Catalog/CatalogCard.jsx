@@ -1,14 +1,23 @@
+import { useNavigate } from 'react-router-dom';
 import { PrimaryButton } from 'ui/PrimaryButton.jsx';
 import { generateCarImgUrl } from '@/utils/requests.js';
 import { useOnHover } from 'hooks/useOnHover.js';
 
 import { GasStation, Heart, Profile2User } from 'iconsax-react';
 
-export const CatalogCard = ({ desc }) => {
+export const CatalogCard = ({ desc, id }) => {
   const [hoverRef, isHovering] = useOnHover();
+  const navigate = useNavigate();
+
+  const onClickCard = (id) => {
+    navigate(id);
+    console.log(id);
+  };
 
   return (
-    <div className="flex flex-col justify-center p-6 bg-white rounded-[10px]">
+    <div
+      onClick={() => onClickCard(id)}
+      className="flex flex-col justify-center p-6 bg-white cursor-pointer rounded-[10px]">
       <div className="flex items-center justify-between mb-16">
         <div>
           <h5 className="text-xl font-bold capitalize text-secondary-500 max-md:text-base max-md:font-semibold">
