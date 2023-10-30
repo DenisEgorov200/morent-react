@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
 import { CatalogCard } from './CatalogCard.jsx';
@@ -7,9 +7,11 @@ import { getCarDesc } from 'utils/requests.js';
 import { searchKeys } from 'constants/constants.jsx';
 import { MinimalButton } from 'ui/MinimalButton.jsx';
 import { PrimaryButton } from 'ui/PrimaryButton.jsx';
+import { setFilteredCars } from '@/store/filteredCars.js';
 
 export const Catalog = () => {
-  const { searchValue } = useSelector((state) => state.search);
+  const dispatch = useDispatch();
+  const { searchValue } = useSelector((state) => state.filteredCars);
   const [carDesc, setCarDesc] = useState([]);
   const [count, setCount] = useState(8);
 
@@ -19,7 +21,9 @@ export const Catalog = () => {
 
   useEffect(() => {
     getCarDesc().then((data) => setCarDesc(data));
-  }, []);
+
+    dispatch(setFilteredCars(carDesc));
+  }, [searchValue]);
 
   const filteredCars = carDesc.filter((car) => {
     return searchKeys.some((key) => car[key].toLowerCase().includes(searchValue));

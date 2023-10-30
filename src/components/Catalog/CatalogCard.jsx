@@ -26,7 +26,7 @@ export const CatalogCard = ({ desc }) => {
           className="cursor-pointer"
         />
       </div>
-      <div className="flex flex-col items-center flex-1 mb-6">
+      <div className="flex flex-col items-center flex-1 mb-6 max-md:flex-row">
         <div className="flex items-center justify-center flex-1 mb-16 max-md:m-0">
           <img
             src={generateCarImgUrl(desc.make, desc.model, desc.year)}

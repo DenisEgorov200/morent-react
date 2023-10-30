@@ -15,7 +15,7 @@ export const Select = ({ placeholder, options }) => {
 
   return (
     <div className="relative flex items-center cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-      <p className="text-secondary-300 text-xs mr-2">{selectedOption || placeholder}</p>
+      <p className="text-secondary-300 text-xs mr-2 max-md:m-0">{selectedOption || placeholder}</p>
       <ArrowDown2 size="14" />
       {isOpen && (
         <ul
