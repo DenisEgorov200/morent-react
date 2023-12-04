@@ -87,6 +87,7 @@ export default {
         900: '#040815',
       },
     },
+    borderRadius: { DEFAULT: '.25rem', ten: '.625rem' },
     extend: {},
   },
   plugins: [],

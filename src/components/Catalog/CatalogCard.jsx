@@ -11,7 +11,6 @@ export const CatalogCard = ({ desc, id }) => {
 
   const onClickCard = (id) => {
     navigate(id);
-    console.log(id);
   };
 
   return (
