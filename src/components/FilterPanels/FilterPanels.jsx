@@ -8,10 +8,9 @@ export const FilterPanels = () => {
   return (
     <div className="relative grid grid-cols-2 gap-x-36 max-2xl:grid-cols-1 max-2xl:gap-y-8">
       <FilterPanel title="Pick - Up" filters={filters} />
-      <PrimaryButton
-        className="w-[60px] h-[60px] rounded-[10px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-        label={<ArrowSwapVertical size="17" color="#fff" />}
-      />
+      <PrimaryButton className="w-[60px] h-[60px] rounded-[10px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <ArrowSwapVertical size="17" color="#fff" />
+      </PrimaryButton>
       <FilterPanel title="Drop - Off" filters={filters} />
     </div>
   );

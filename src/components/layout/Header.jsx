@@ -8,20 +8,18 @@ export const Header = () => {
         <h1 className="title mr-16">MORENT</h1>
         <SearchInput />
       </div>
-      <div>
-        <ul className="flex">
-          {headerIcons.map((icon) => (
-            <li
-              key={icon.name}
-              className="p-2.5 border-[1px] border-secondary-200 rounded-full cursor-pointer mr-5">
-              {icon.item}
-            </li>
-          ))}
-          <li className="border-[1px] border-secondary-200 rounded-full cursor-pointer">
-            <img className="w-full h-full" src="/avatar.png" alt="avatar" />
+      <ul className="flex">
+        {headerIcons.map((icon) => (
+          <li
+            key={icon.name}
+            className="p-2.5 border-[1px] border-secondary-200 rounded-full cursor-pointer mr-5">
+            {icon.item}
           </li>
-        </ul>
-      </div>
+        ))}
+        <li className="max-w-[46px] border-[1px] border-secondary-200 rounded-full cursor-pointer">
+          <img src="/avatar.jpg" alt="avatar" />
+        </li>
+      </ul>
     </header>
   );
 };

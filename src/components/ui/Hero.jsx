@@ -12,7 +12,7 @@ export const Hero = () => {
             Ease of doing a car rental safely and reliably. Of course at a low price.
           </p>
         </div>
-        <PrimaryButton label="Rental Car" />
+        <PrimaryButton>Rental Car</PrimaryButton>
         <div className="flex justify-center max-md:w-full max-md:mt-7">
           <img src="/herocar.png" alt="car" />
         </div>
@@ -24,7 +24,7 @@ export const Hero = () => {
             Ease of doing a car rental safely and reliably. Of course at a low price.
           </p>
         </div>
-        <PrimaryButton label="Rental Car" color="information-500" />
+        <PrimaryButton color="information-500">Rental Car</PrimaryButton>
         <div className="flex justify-center">
           <img src="/herocar.png" alt="car" />
         </div>

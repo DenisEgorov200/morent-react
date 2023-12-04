@@ -63,7 +63,7 @@ export const CatalogCard = ({ desc, id }) => {
           </span>{' '}
           day
         </p>
-        <PrimaryButton label="Rent Now" />
+        <PrimaryButton>Rent Now</PrimaryButton>
       </div>
     </div>
   );

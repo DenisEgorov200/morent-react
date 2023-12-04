@@ -50,7 +50,7 @@ export const Catalog = () => {
       </div>
       <div className="relative flex items-center justify-center mt-16">
         {count <= carDesc.length && (
-          <PrimaryButton label="Show more car" onClick={() => handleShowMore()} />
+          <PrimaryButton onClick={() => handleShowMore()}>Show more car</PrimaryButton>
         )}
         <span className="absolute right-0 text-sm font-semibold text-secondary-300">
           {carDesc.length} car
