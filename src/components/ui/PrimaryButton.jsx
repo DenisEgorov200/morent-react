@@ -5,7 +5,7 @@ export const PrimaryButton = ({ children, className, onClick, color }) => {
 
   return (
     <button
-      onClick={() => onClick()}
+      onClick={onClick}
       className={clsx(
         className,
         'py-2.5 px-5 font-semibold text-white border-[1px] border-transparent rounded',
