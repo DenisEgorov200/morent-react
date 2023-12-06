@@ -67,3 +67,38 @@ export const footerLinks = [
 ];
 
 export const searchKeys = ['make', 'model'];
+
+export const sidebarOptions = [
+  {
+    id: 0,
+    title: 'Type',
+    options: [
+      { id: 0, label: 'Sport' },
+      { id: 1, label: 'SUV' },
+      { id: 2, label: 'MPV' },
+      { id: 3, label: 'Sedan' },
+      { id: 4, label: 'Coupe' },
+      { id: 5, label: 'Hatchback' },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Capacity',
+    options: [
+      { id: 0, label: '2 Person' },
+      { id: 1, label: '4 Person' },
+      { id: 2, label: '6 Person' },
+      { id: 3, label: '8 or More' },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Price',
+    options: [
+      { id: 0, label: '2 Person' },
+      { id: 1, label: '4 Person' },
+      { id: 2, label: '6 Person' },
+      { id: 3, label: '8 or More' },
+    ],
+  },
+];

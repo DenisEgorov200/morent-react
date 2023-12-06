@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
 import { getCarDesc } from 'utils/requests.js';
 import { setFilteredCars } from '@/store/filteredCars.js';
-import { searchKeys } from 'constants/constants.jsx';
 
 import { Layout } from 'components/layout/Layout.jsx';
 import { PrimaryButton } from 'ui/PrimaryButton.jsx';
@@ -15,23 +14,17 @@ import { ArrowDown2 } from 'iconsax-react';
 
 export const CarDetail = () => {
   const dispatch = useDispatch();
-  const { searchValue } = useSelector((state) => state.filteredCars);
   const [carDesc, setCarDesc] = useState([]);
-  const [count, setCount] = useState(8);
 
   useEffect(() => {
     getCarDesc().then((data) => setCarDesc(data));
 
     dispatch(setFilteredCars(carDesc));
-  }, [searchValue]);
-
-  const filteredCars = carDesc.filter((car) => {
-    return searchKeys.some((key) => car[key].toLowerCase().includes(searchValue));
-  });
+  }, []);
 
   return (
-    <Layout>
-      <div className="grid grid-cols-2 gap-x-11 py-8">
+    <Layout showSidebar={true}>
+      <div className="grid grid-cols-2 gap-x-11 mb-8">
         <div className="grid grid-cols-3 gap-6">
           <div className="col-span-3 p-6 bg-primary-500 text-white font-medium rounded-ten max-md:hidden">
             <div className="max-w-[400px]">
@@ -47,13 +40,13 @@ export const CarDetail = () => {
             </div>
           </div>
           <div>
-            <img src="/car.png" alt="" />
+            <img src="/car.png" alt="car" />
           </div>
           <div>
-            <img src="/car.png" alt="" />
+            <img src="/car.png" alt="car" />
           </div>
           <div>
-            <img src="/car.png" alt="" />
+            <img src="/car.png" alt="car" />
           </div>
         </div>
         <div className="px-6 pt-6 pb-8 bg-white rounded-ten text-secondary-400">
