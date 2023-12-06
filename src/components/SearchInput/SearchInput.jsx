@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearchValue } from '@/store/filteredCars.js';
+import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { setSearchValue } from '@/store/filteredCars.js';
 
 import { SearchNormal1, Setting4 } from 'iconsax-react';
 
 export const SearchInput = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { searchValue } = useSelector((state) => state.filteredCars);
   const { filteredCars } = useSelector((state) => state.filteredCars);
 
@@ -21,10 +23,13 @@ export const SearchInput = () => {
       <Setting4 className="ml-5" size="24" color="#596780" />
       <ul className="absolute left-0 top-[50px] w-full max-h-60 overflow-auto bg-white rounded-b">
         {searchValue &&
-          filteredCars.map((cars) => (
-            <li key={uuidv4()} className="px-5 py-2.5 cursor-pointer hover:bg-secondary-100">
+          filteredCars.map((car) => (
+            <li
+              key={uuidv4()}
+              className="px-5 py-2.5 cursor-pointer hover:bg-secondary-100"
+              onClick={() => navigate(uuidv4())}>
               <p className="font-medium capitalize">
-                {cars.make} {cars.model}
+                {car.make} {car.model}
               </p>
             </li>
           ))}

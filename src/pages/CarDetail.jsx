@@ -95,8 +95,10 @@ export const CarDetail = () => {
         </div>
         <ul className="flex flex-col items-center gap-6">
           <li className="flex">
-            <div className="max-w-[46px] rounded-full overflow-hidden mr-4">
-              <img src="/avatar.jpg" alt="avatar" className="w-full" />
+            <div className="mr-4">
+              <div className="max-w-[46px] rounded-full overflow-hidden">
+                <img src="/avatar.jpg" alt="avatar" className="w-full" />
+              </div>
             </div>
             <div className="flex flex-col">
               <div className="flex items-center justify-between mb-1">
@@ -115,8 +117,10 @@ export const CarDetail = () => {
             </div>
           </li>
           <li className="flex">
-            <div className="max-w-[46px] rounded-full overflow-hidden mr-4">
-              <img src="/avatar.jpg" alt="avatar" className="w-full" />
+            <div className="mr-4">
+              <div className="max-w-[46px] rounded-full overflow-hidden">
+                <img src="/avatar.jpg" alt="avatar" className="w-full" />
+              </div>
             </div>
             <div className="flex flex-col">
               <div className="flex items-center justify-between mb-1">
