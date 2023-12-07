@@ -11,7 +11,7 @@ const imgConfig = {
   },
 };
 
-export const getCarDesc = async (model) => {
+export const getCarDesc = async () => {
   try {
     const response = await ky.get(
       `https://api.api-ninjas.com/v1/cars?limit=50&year=2022`,

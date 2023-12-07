@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+import { setCurrentCar } from '@/store/currentCar.js';
 import { useNavigate } from 'react-router-dom';
 import { PrimaryButton } from 'ui/PrimaryButton.jsx';
 import { generateCarImgUrl } from '@/utils/requests.js';
@@ -6,16 +8,18 @@ import { useOnHover } from 'hooks/useOnHover.js';
 import { GasStation, Heart, Profile2User } from 'iconsax-react';
 
 export const CatalogCard = ({ desc, id }) => {
+  const dispatch = useDispatch();
   const [hoverRef, isHovering] = useOnHover();
   const navigate = useNavigate();
 
-  const onClickCard = (id) => {
+  const onClickCard = (desc) => {
     navigate(id);
+    dispatch(setCurrentCar(desc));
   };
 
   return (
     <div
-      onClick={() => onClickCard(id)}
+      onClick={() => onClickCard(desc)}
       className="flex flex-col justify-center p-6 bg-white cursor-pointer rounded-[10px]">
       <div className="flex items-center justify-between mb-16">
         <div>

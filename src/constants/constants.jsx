@@ -129,3 +129,9 @@ export const reviews = [
     text: 'We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.',
   },
 ];
+
+export const ImgInfoCar = [
+  { id: 0, src: 'gtr.png' },
+  { id: 1, src: 'gtr.png' },
+  { id: 2, src: 'gtr.png' },
+];
