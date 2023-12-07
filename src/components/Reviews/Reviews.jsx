@@ -5,6 +5,7 @@ import { MinimalButton } from 'ui/MinimalButton.jsx';
 
 import { ArrowDown2 } from 'iconsax-react';
 import clsx from 'clsx';
+import { formateDate } from 'constants/formateDate.js';
 
 export const Reviews = () => {
   const [initialReviews, setInitialReviews] = useState(2);
@@ -12,7 +13,7 @@ export const Reviews = () => {
 
   const handleShowMore = () => {
     setShowReviews(!showReviews);
-    showReviews ? setInitialReviews(reviews.length) : setInitialReviews(2);
+    showReviews ? setInitialReviews(2) : setInitialReviews(reviews.length);
   };
 
   return (
@@ -35,7 +36,9 @@ export const Reviews = () => {
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-1">
                   <h6 className="text-xl text-secondary-500 font-bold">{review.name}</h6>
-                  <span className="text-sm text-secondary-300 font-medium"> jul 19</span>
+                  <span className="text-sm text-secondary-300 font-medium">
+                    {formateDate(review.date)}
+                  </span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
                   <p className="text-sm text-secondary-300 font-medium">{review.profession}</p>
@@ -52,7 +55,7 @@ export const Reviews = () => {
           <ArrowDown2
             size="16"
             color="#90A3BF"
-            className={clsx('transition-transform ml-2', {
+            className={clsx('transition-transform duration-1000 ml-2', {
               'rotate-180': showReviews,
             })}
           />
