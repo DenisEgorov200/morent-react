@@ -1,8 +1,9 @@
 import clsx from 'clsx';
 
-export const MinimalButton = ({ children, className }) => {
+export const MinimalButton = ({ children, className, onClick }) => {
   return (
     <button
+      onClick={onClick}
       className={clsx(
         'flex py-2.5 px-5 font-semibold text-primary-500 border-[1px] border-transparent',
         className,

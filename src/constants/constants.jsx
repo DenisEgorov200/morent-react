@@ -107,7 +107,7 @@ export const reviews = [
   {
     id: 0,
     name: 'Alex Stanton',
-    date: '21 July 2022',
+    date: new Date(),
     profession: 'CEO at Bukalapak',
     rating: 4,
     text: 'We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.',
@@ -115,7 +115,7 @@ export const reviews = [
   {
     id: 1,
     name: 'Skylar Dias',
-    date: '20 July 2022',
+    date: new Date(),
     profession: 'CEO at Amazon',
     rating: 3,
     text: 'We are greatly helped by the services of the MORENT Application. Morent has low prices and also a wide variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.',
@@ -123,8 +123,8 @@ export const reviews = [
   {
     id: 2,
     name: 'Denis Egorov',
-    date: '22 July 2022',
-    profession: 'frontend developer at Google',
+    date: new Date(),
+    profession: 'Frontend Developer at Google',
     rating: 5,
     text: 'We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.',
   },

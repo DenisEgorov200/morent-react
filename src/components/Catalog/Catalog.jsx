@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { setFilteredCars } from '@/store/filteredCars.js';
 
 import { getCarDesc } from 'utils/requests.js';
 import { searchKeys } from 'constants/constants.jsx';
 import { PrimaryButton } from 'ui/PrimaryButton.jsx';
-import { setFilteredCars } from '@/store/filteredCars.js';
 import { CarRow } from 'components/CarRow/CarRow.jsx';
 
 export const Catalog = () => {

@@ -8,17 +8,20 @@ import { generateCarImgUrl } from 'utils/requests.js';
 
 export const InfoCar = () => {
   const { currentCar } = useSelector((state) => state.currentCar);
-  const [activeId, setActiveId] = useState(0);
+
+  const [activeUrl, setActiveUrl] = useState('');
 
   return (
     <div className="grid grid-cols-2 gap-x-11 mb-8">
       <div className="grid grid-cols-3 gap-6">
-        <div className="flex col-span-3 p-6 bg-primary-500 text-white font-medium rounded-ten max-md:hidden">
-          <div className="max-w-[400px]">
+        <div
+          className="flex col-span-3 p-6 bg-primary-500 text-white font-medium rounded-ten max-md:hidden"
+          style={{ backgroundImage: `url(/${activeUrl})` }}>
+          <div>
             <h2 className="text-3xl font-semibold mb-4">
               Sports car with the best design and acceleration
             </h2>
-            <p className="max-w-[284px] mb-8">
+            <p className="mb-8">
               Safety and comfort while driving a futuristic and elegant sports car
             </p>
           </div>
@@ -32,8 +35,8 @@ export const InfoCar = () => {
         {ImgInfoCar.map((img) => (
           <div
             key={img.id}
-            className="rounded-ten overflow-hidden"
-            onClick={() => setActiveId(img.src)}>
+            className="rounded-ten overflow-hidden cursor-pointer"
+            onClick={() => setActiveUrl(img.src)}>
             <img src={`/${img.src}`} alt="car" className="h-full" />
           </div>
         ))}
