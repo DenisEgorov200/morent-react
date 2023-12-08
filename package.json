@@ -12,7 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "clsx": "^2.0.0",
-    "embla-carousel": "^8.0.0-rc15",
+    "embla-carousel-react": "^8.0.0-rc15",
     "iconsax-react": "^0.0.8",
     "ky": "^1.0.1",
     "react": "^18.2.0",

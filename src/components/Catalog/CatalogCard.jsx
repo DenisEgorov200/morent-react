@@ -13,7 +13,7 @@ export const CatalogCard = ({ desc, id }) => {
   const navigate = useNavigate();
 
   const onClickCard = (desc) => {
-    navigate(id);
+    navigate(`/catalog/${id}`);
     dispatch(setCurrentCar(desc));
   };
 

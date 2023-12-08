@@ -2,11 +2,11 @@ import { MinimalButton } from 'ui/MinimalButton.jsx';
 import { CatalogCard } from 'components/Catalog/CatalogCard.jsx';
 import { v4 as uuidv4 } from 'uuid';
 
-export const CarRow = ({ cars, count }) => {
+export const CarRow = ({ cars, count, title }) => {
   return (
     <>
       <div className="flex items-center justify-between mb-5">
-        <h4 className="font-semibold text-secondary-300">Popular car</h4>
+        <h4 className="font-semibold text-secondary-300 capitalize">{title}</h4>
         <MinimalButton label="View all" />
       </div>
       <div className="grid grid-cols-4 gap-8 max-xl:flex overflow-auto">

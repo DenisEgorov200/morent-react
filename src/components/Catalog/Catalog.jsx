@@ -30,10 +30,10 @@ export const Catalog = () => {
   return (
     <div className="pb-16 pt-8">
       <div className="mb-8">
-        <CarRow cars={carDesc} />
+        <CarRow cars={carDesc} title="Popular Car" />
       </div>
       <div>
-        <CarRow cars={filteredCars} count={count} />
+        <CarRow cars={filteredCars} count={count} title="Recommendation Car" />
       </div>
       <div className="relative flex items-center justify-center mt-16">
         {count <= carDesc.length && (

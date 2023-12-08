@@ -24,10 +24,10 @@ export const CarDetail = () => {
       <InfoCar />
       <Reviews />
       <div className="py-8">
-        <CarRow cars={carDesc} />
+        <CarRow cars={carDesc} title="Recent Car" />
       </div>
       <div className="py-8">
-        <CarRow cars={carDesc} />
+        <CarRow cars={carDesc} title="Recommendation Car" />
       </div>
     </Layout>
   );

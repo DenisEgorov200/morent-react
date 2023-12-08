@@ -1,46 +1,19 @@
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { ImgInfoCar } from 'constants/constants.jsx';
+import { InfoCarCarousel } from 'components/InfoCar/InfoCarCarousel.jsx';
 import { PrimaryButton } from 'ui/PrimaryButton.jsx';
 
 import { Heart } from 'iconsax-react';
-import { generateCarImgUrl } from 'utils/requests.js';
 
 export const InfoCar = () => {
   const { currentCar } = useSelector((state) => state.currentCar);
 
-  const [activeUrl, setActiveUrl] = useState('');
+  const OPTIONS = {};
+  const SLIDE_COUNT = 3;
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   return (
     <div className="grid grid-cols-2 gap-x-11 mb-8">
-      <div className="grid grid-cols-3 gap-6">
-        <div
-          className="flex col-span-3 p-6 bg-primary-500 text-white font-medium rounded-ten max-md:hidden"
-          style={{ backgroundImage: `url(/${activeUrl})` }}>
-          <div>
-            <h2 className="text-3xl font-semibold mb-4">
-              Sports car with the best design and acceleration
-            </h2>
-            <p className="mb-8">
-              Safety and comfort while driving a futuristic and elegant sports car
-            </p>
-          </div>
-          <div className="max-w-[380px] flex justify-center">
-            <img
-              src={generateCarImgUrl(currentCar.make, currentCar.model, currentCar.year)}
-              alt={`${currentCar.make} ${currentCar.model}`}
-            />
-          </div>
-        </div>
-        {ImgInfoCar.map((img) => (
-          <div
-            key={img.id}
-            className="rounded-ten overflow-hidden cursor-pointer"
-            onClick={() => setActiveUrl(img.src)}>
-            <img src={`/${img.src}`} alt="car" className="h-full" />
-          </div>
-        ))}
-      </div>
+      <InfoCarCarousel slides={SLIDES} options={OPTIONS} text={currentCar} />
       <div className="relative px-6 pt-6 pb-8 bg-white rounded-ten text-secondary-400">
         <Heart
           size="24"
@@ -59,7 +32,7 @@ export const InfoCar = () => {
           NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most
           unforgiving proving ground, the "race track".
         </p>
-        <div className="grid grid-cols-2 grid-rows-2 gap-x-11 gap-y-4 mb-16">
+        <div className="grid grid-cols-2 grid-rows-2 gap-x-7 gap-y-4 mb-16">
           <div className="flex items-center justify-between capitalize">
             <span className="text-xl text-secondary-300">type car</span>
             <span className="text-xl font-semibold">{currentCar.class}</span>

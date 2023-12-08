@@ -5,7 +5,7 @@ import { MinimalButton } from 'ui/MinimalButton.jsx';
 
 import { ArrowDown2 } from 'iconsax-react';
 import clsx from 'clsx';
-import { formateDate } from 'constants/formateDate.js';
+import { formateDate } from 'utils/formateDate.js';
 
 export const Reviews = () => {
   const [initialReviews, setInitialReviews] = useState(2);
