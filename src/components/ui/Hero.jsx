@@ -6,7 +6,7 @@ export const Hero = () => {
 
   return (
     <div className="grid grid-cols-2 gap-x-8 py-8 max-md:grid-cols-1">
-      <div className="p-6 bg-information-500 text-white font-medium rounded-[10px]">
+      <div className="p-6 bg-[url('/slide-bg-1.png')] bg-cover text-white font-medium rounded-[10px]">
         <div className="max-w-[295px] max-md:max-w-[245px]">
           <h2 className="text-3xl font-semibold mb-4 max-md:text-base max-md:mb-3">
             The Best Platform for Car Rental
@@ -20,7 +20,7 @@ export const Hero = () => {
           <img src="/herocar.png" alt="car" />
         </div>
       </div>
-      <div className="p-6 bg-primary-500 text-white font-medium rounded-[10px] max-md:hidden">
+      <div className="p-6 bg-[url('/slide-bg-2.png')] bg-cover text-white font-medium rounded-[10px] max-md:hidden">
         <div className="max-w-[295px]">
           <h2 className="text-3xl font-semibold mb-4">Easy way to rent a car at a low price</h2>
           <p className="mb-5">
