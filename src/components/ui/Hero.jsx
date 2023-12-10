@@ -27,7 +27,7 @@ export const Hero = () => {
             Providing cheap car rental services and safe and comfortable facilities.
           </p>
         </div>
-        <PrimaryButton onClick={() => navigate('/catalog')} color="information-500">
+        <PrimaryButton onClick={() => navigate('/catalog')} color="bg-information-500">
           Rental Car
         </PrimaryButton>
         <div className="flex justify-center">
