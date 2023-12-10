@@ -1,5 +1,5 @@
-import { TickSquare } from 'iconsax-react';
 import { sidebarOptions } from 'constants/constants.jsx';
+import { CustomCheckbox } from 'ui/CustomCheckbox.jsx';
 
 export const Sidebar = () => {
   return (
@@ -11,12 +11,14 @@ export const Sidebar = () => {
           </h6>
           <ul className="flex flex-col gap-8">
             {option.options.map((filter) => (
-              <li key={filter.id} className="flex items-center">
-                <TickSquare size="24" color="#3563E9" className="mr-2" />
-                <p className="text-xl text-secondary-400 font-semibold">
-                  {filter.label}
-                  <span className="text-secondary-300 ml-2">(10)</span>
-                </p>
+              <li key={filter.id}>
+                <label className="flex items-center cursor-pointer">
+                  <CustomCheckbox className="mr-2.5" />
+                  <p className="text-xl text-secondary-400 font-semibold">
+                    {filter.label}
+                    <span className="text-secondary-300 ml-2">(10)</span>
+                  </p>
+                </label>
               </li>
             ))}
           </ul>

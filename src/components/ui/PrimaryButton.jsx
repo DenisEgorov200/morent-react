@@ -2,7 +2,6 @@ import clsx from 'clsx';
 
 export const PrimaryButton = ({ children, className, onClick, color }) => {
   const bgColor = color ? color : 'bg-primary-500';
-  console.log(bgColor);
 
   return (
     <button
