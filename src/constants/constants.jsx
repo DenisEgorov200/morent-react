@@ -91,16 +91,6 @@ export const sidebarOptions = [
       { id: 3, label: '8 or More' },
     ],
   },
-  {
-    id: 2,
-    title: 'Price',
-    options: [
-      { id: 0, label: '2 Person' },
-      { id: 1, label: '4 Person' },
-      { id: 2, label: '6 Person' },
-      { id: 3, label: '8 or More' },
-    ],
-  },
 ];
 
 export const reviews = [
